@@ -21,7 +21,7 @@
 https://github.com/deliaswe/logo-maker
 
 ## Usage
-!['Circle'] (http://127.0.0.1:5500/logo.svg)
+- [Circle] ![screencapture-127-0-0-1-5500-logo-svg-2023-06-18-12_06_55](https://github.com/deliaswe/logo-maker/assets/113808453/67480686-c8b5-4ae4-a4cf-50a2f2d24a3a)
 
 
 ## Credits
