@@ -16,7 +16,7 @@
 - The package utilizes node.js, fs package, inquier, and jest.
 
 ## Installation
-- To install this application, you will need to install Node.js and npm
+- To install this application, you will need to install Node.js and npm i
 
 https://github.com/deliaswe/logo-maker
 
@@ -24,7 +24,8 @@ https://github.com/deliaswe/logo-maker
 
 
 ## Credits
-
+https://www.w3schools.com/graphics/svg_intro.asp
+https://www.npmjs.com/package/inquirer
 
 ## License
 ![GitHub all releases](https://img.shields.io/github/downloads/deliaswe/Professional-Readme-Generator/total?label=Delia%20young&logo=github&logoColor=%23ff69b4&style=for-the-badge)
@@ -55,7 +56,9 @@ SOFTWARE.
 Delia Young
 ## Test
 - node index.js
-
+- jest
+- npm i
+- npm test
 
 ## Questions
 * GitHub: Deliaswe
