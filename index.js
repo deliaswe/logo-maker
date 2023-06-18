@@ -1,97 +1,55 @@
-// requiring npm packages
-const inquirer = require('inquirer');
+// Requiring npm packages
 const fs = require('fs');
-const {Circle, Square, Triangle} = require('./lib/shapes');
-const SVG = require('svg');
-
-// Created an array of questions
-const questions = [
-{
-    type: 'input',
-    name: 'text',
-    message: 'Enter up to 3 text characters:',
-    validate: (input) => {
-        if (input.length <= 3) {
-        return true;
-        }
-        return 'Please enter up to 3 text characters:'
-    }
-},
-{
-    type: 'input',
-    name: 'textColor',
-    message: 'Enter a color or hexadecimal number for the text:',
-},
-{
-    type: 'list',
-    name: 'shape',
-    message: 'choose a shape for your logo',
-    choices: ['circle', 'square', 'triangle'],
-},
-{
-    type: 'input',
-    name: 'shapeColor',
-    message: 'choose a background color or hexadecimal number for your logo:',
-},
-];
-
-// .svg file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    console.log(`Generated "${fileName}" created successfully!`);
-});
-}
-
-// a function to initialize app
+const inquirer = require('inquirer');
+const shaped = require('./lib/shapes.js');
+const Shaped = new shaped();
 function init() {
-    inquirer.prompt(questions).then(function(answers) {
-    const logo = generatelogo(answers);
 
-    if (!logo) {
-        console.log("Invalid shape!");
-        return;
-    }
+   // questions for shapes, text, and colors
+    inquirer
+    .prompt([
+        {
+            type:"input",
+            message:"Please enter up to three characters for your logo: ",
+            name:"text",
+        },
+        {
+            type:"input",
+            message: "Please enter your desired color for the text or enter the associated hexadecimal number.",
+            name:"textColor",  
+        },
+        {
+            type:"list",
+            message: "Please enter your desired color for the shape or enter the associated hexadecimal number.",
+            name:"shape",
+            choices:["Circle","Triangle","Square"],
+        },
+        {
+            type:"input",
+            message: "Please enter your desired color for the shape or enter the associated hexadecimal number.",
+            name:"shapeColor",  
+        },
+    ])
+    
+    // ./logo.svg file
+    .then((data)=>{
+        fs.writeFileSync("./logo.svg",`<svg width="${300}" height="${200}" version="${1.1}" xmlns="http://www.w3.org/2000/svg">`);
+        switch(data.shape){
+            case "Circle":
+                fs.appendFileSync("./logo.svg",` ${Shaped.circle(data.shapeColor)}`);
+            break;
 
-    writeToFile('logo.svg', logo.render());
-});
+            case "Triangle":
+                fs.appendFileSync("./logo.svg",` ${Shaped.triangle(data.shapeColor)}`);
+            break;
+
+            case "Square":
+                fs.appendFileSync("./logo.svg",` ${Shaped.square(data.shapeColor)}`);
+            break;
+
+        }
+        fs.appendFileSync("./logo.svg",` ${Shaped.text(data.text,data.textColor)}`);
+        fs.appendFileSync("./logo.svg",`</svg>`);
+    });
 }
-
-// Function to generate logo
-function generatelogo(answers) {
-    const text = answers.text;
-    const textColor = answers.textColor;
-    const shape = answers.shape;
-    const shapeColor = answers.shapeColor;
-    console.log("text:", text, "shapeColor:", shapeColor, "textColor:", textColor, "shape:", shape);
-
-    let logo;
-
-    switch (shape) {
-    case "circle":
-        logo = new Circle();
-        break;
-    case "square":
-        logo = new Square();
-        break;
-    case "triangle":
-        logo = new Triangle();
-        break;
-    default:
-        return null;
-}
-
-    logo.setColor(shapeColor);
-    const svg = new SVG();
-    svg.setText(text, textColor);
-    svg.setShape(logo);
-    svg.setTextAnchor('middle');
-
-    return svg.render();
-}
-
-// Function to call app
-init();
+init(); 

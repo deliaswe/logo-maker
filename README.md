@@ -16,13 +16,11 @@
 - The package utilizes node.js, fs package, inquier, and jest.
 
 ## Installation
-- 
-- 
+- To install this application, you will need to install Node.js and npm
 
 https://github.com/deliaswe/logo-maker
 
 ## Usage
-
 
 
 ## Credits
@@ -56,6 +54,7 @@ SOFTWARE.
 ## Contribution
 Delia Young
 ## Test
+- node index.js
 
 
 ## Questions
