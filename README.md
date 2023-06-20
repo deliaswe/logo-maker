@@ -18,15 +18,17 @@
 ## Installation
 - To install this application, you will need to install Node.js and npm i
 
-https://github.com/deliaswe/logo-maker
+- https://github.com/deliaswe/logo-maker
 
 ## Usage
-- [Circle] ![screencapture-127-0-0-1-5500-logo-svg-2023-06-18-12_06_55](https://github.com/deliaswe/logo-maker/assets/113808453/67480686-c8b5-4ae4-a4cf-50a2f2d24a3a)
-
+https://github.com/deliaswe/logo-maker/assets/113808453/2542ced6-6d42-401e-ba9d-1d7a446a7ff2
+https://github.com/deliaswe/logo-maker/assets/113808453/8e0f2a08-6953-4852-ba10-342253507d92
 
 ## Credits
-https://www.w3schools.com/graphics/svg_intro.asp
-https://www.npmjs.com/package/inquirer
+- https://www.w3schools.com/graphics/svg_intro.asp
+- https://www.npmjs.com/package/inquirer
+- https://www.w3.org/TR/SVG/struct.html
+- https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Texts
 
 ## License
 ![GitHub all releases](https://img.shields.io/github/downloads/deliaswe/Professional-Readme-Generator/total?label=Delia%20young&logo=github&logoColor=%23ff69b4&style=for-the-badge)
