@@ -21,7 +21,8 @@
 - https://github.com/deliaswe/logo-maker
 
 ## Usage
-https://github.com/deliaswe/logo-maker/assets/113808453/2542ced6-6d42-401e-ba9d-1d7a446a7ff2
+https://github.com/deliaswe/logo-maker/assets/113808453/5fb20b73-1ccd-46d1-98d6-42ddde3b42da
+
 https://github.com/deliaswe/logo-maker/assets/113808453/8e0f2a08-6953-4852-ba10-342253507d92
 
 ## Credits
