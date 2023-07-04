@@ -12,8 +12,13 @@
 
 ## Description
 
-- This project generates an SVG logo after recieving the users inputs.
-- The package utilizes node.js, fs package, inquier, and jest.
+- This project generates an SVG logo after receiving the user's inputs. 
+- The package utilizes Node.js, the fs package, inquirer, and Jest.
+-  The project uses the following Node.js packages:
+
+- fs: This package provides file system access.
+- inquirer: This package provides a user interface for collecting input from the user.
+- Jest: This package provides unit testing functionality.
 
 ## Installation
 - To install this application, you will need to install Node.js and npm i
